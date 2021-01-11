@@ -40,10 +40,10 @@ function Home() {
   return (
     <HomeWrapper>
       <HomeDiv>
-        <DisplayMedium>
-          Hello there! I'm <NameText> Dave Elliott,</NameText> and I'm a Full
+        <Headline>
+          Hello there! I'm <NameText> David Elliott,</NameText> and I'm a Full
           Stack Web Developer.
-        </DisplayMedium>
+        </Headline>
 
         <ItemDetailsImage image_source={DaveSrc} smaller_source={SmallerSource}>
           <ProfileButtons>
@@ -234,6 +234,20 @@ function Home() {
     </HomeWrapper>
   );
 }
+
+const Headline = styled.div`
+  font-size: 26px;
+  line-height: 32px;
+  font-weight: 400;
+  text-align: justify;
+
+  @media (max-width: 800px) {
+    font-size: 21px;
+    line-height: 28px;
+    font-weight: 400;
+    text-align: justify;
+  }
+`;
 
 const DisplayMedium = styled.div`
   font-size: 26px;
