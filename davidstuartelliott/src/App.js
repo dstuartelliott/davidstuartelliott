@@ -168,4 +168,3 @@ font-weight: 400;
 `;
 
 export default App;
-npo;

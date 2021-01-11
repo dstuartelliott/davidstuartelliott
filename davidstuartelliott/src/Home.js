@@ -8,7 +8,6 @@ import {
   AiFillGithub,
   AiFillTwitterCircle,
   AiFillLinkedin,
-  AiOutlineArrowRight,
 } from "react-icons/ai";
 
 import Journey from "./Journey.js";
