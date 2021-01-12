@@ -76,10 +76,16 @@ const JourneyWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
 `;
 
 const JourneyText = styled.div`
-  font-size: 15px;
+  font-family: Avenir Next;
+  font-style: normal;
+  font-weight: bold;
+
+  font-size: 13px;
   font-weight: 500;
   height: 40px;
   border-radius: 4px;

@@ -7,7 +7,6 @@ import TopFigma from "./TopFigma";
 import DaveSrc from "./images/self_portfolio.jpg"; // Tell webpack this JS file uses this image
 
 import HowImg1 from "./images/How1Master.png"; // Tell webpack this JS file uses this image
-import TelusImg1 from "./images/telus1.png"; // Tell webpack this JS file uses this image
 
 import {
   AiFillGithub,
@@ -24,11 +23,7 @@ function goToNetlifyProject() {
 
 function goToGitHubProject() {
   window.location.href =
-    "https://github.com/dstuartelliott/shopify-podcast-translator";
-}
-
-function goToHowPeopleTalk() {
-  window.location.href = "http://www.howpeopletalk.com/";
+    "https://github.com/davidelliott007/shopify-podcast-translator/tree/ver-1";
 }
 
 function goToGitHub() {
@@ -68,6 +63,7 @@ function Home() {
             </ProfileButton>
           </ProfileButtons>
         </ItemDetailsImage>
+        <Journey></Journey>
 
         <IntroStatement>
           <IntroPitch>
@@ -94,69 +90,12 @@ function Home() {
             make, and every standup I go to is, frankly, joyful.
           </IntroPitch>
         </IntroStatement>
-        <Headline>From Design, to Leadership, to Development</Headline>
-
-        <Journey></Journey>
-
         <Pitch>
-          <Headline>Developer Skills</Headline>
-          <Skills>
-            <SkillItem>
-              <SkillHeadline>Front End</SkillHeadline>
-              <ul>
-                <li>React </li>
-                <li>Redux </li>
-                <li>JavaScript ES6 </li>
-                <li>HTML </li>
-                <li>CSS</li>
-              </ul>
-            </SkillItem>
-            <SkillItem>
-              <SkillHeadline>Back End</SkillHeadline>
-              <ul>
-                <li>Node.js </li>
-                <li>Express </li>
-                <li>MongoDB </li>
-              </ul>
-            </SkillItem>
-            <SkillItem>
-              <SkillHeadline>Testing </SkillHeadline>
-              <ul>
-                <li>Enzyme </li>
-                <li>Jest </li>
-                <li>React Testing Library </li>
-              </ul>
-            </SkillItem>
-            <SkillItem>
-              <SkillHeadline>Mobile </SkillHeadline>
-              <ul>
-                <li>iOS Swift </li>
-                <li>iOS ARKit </li>
-              </ul>
-            </SkillItem>
-            <SkillItem>
-              <SkillHeadline>Tools </SkillHeadline>
-              <ul>
-                <li>Jira & Trello </li>
-                <li>GitHub </li>
-                <li>NPM </li>
-                <li>VS Code </li>
-                <li>Photoshop & Captivate </li>
-                <li>Figma</li>
-              </ul>
-            </SkillItem>
-          </Skills>
-        </Pitch>
-
-        <Pitch>
-          <Headline>FullStack Graduation Project - How People Talk</Headline>
+          <Headline>Project - How People Talk</Headline>
           <IntroPitch>
-            A podcast app that non-english speakers can use to learn
-            conversational english.
-          </IntroPitch>
-          <IntroPitch>
-            Episodes repeated back to you in your native tongue with a local
-            accent.
+            Supporting the Podcast industry is a passion of mine, so I thought I
+            would take the great Shopify Masters podcast and see if I could add
+            some value to it.
           </IntroPitch>
 
           <Details>
@@ -165,41 +104,100 @@ function Home() {
               smaller_source={HowImg1}
             ></AppDetailsImg>
 
-            <ProjectButtons>
-              <TLDRBtnSmaller onClick={goToHowPeopleTalk}>
-                howpeopletalk.com
-              </TLDRBtnSmaller>
-              <TLDRBtnSmaller onClick={goToGitHubProject}>
-                Explore GitHub Repo for HowPeopleTalk
-              </TLDRBtnSmaller>
-            </ProjectButtons>
-          </Details>
-
-          <Headline>Telus Digital Internship - Brand Hub</Headline>
-          <IntroPitch>
-            An internal Telus Site that showcases Brand assets and guidelines.
-          </IntroPitch>
-          <IntroPitch>
-            I develop Front End changes, I collaborate with my fellow devs, and
-            I test and merge PRs with our internal GitHub.
-          </IntroPitch>
-          <Details>
-            <AppDetailsImg
-              image_source={TelusImg1}
-              smaller_source={TelusImg1}
-            ></AppDetailsImg>
             <IntroPitch>
-              This is an internal product, but I'm happy to discuss the tools
-              and processes used to develop
+              <StandOut>
+                I decided to try something a little ambitious - could I produce
+                an interactive french version of the podcast using NodeJS, React
+                and Redux?
+              </StandOut>
+              Explore Project >
             </IntroPitch>
+            <IntroPitch>
+              I wanted an interactive transcript that would offer french
+              translations, line per line, that I could skip if I wanted to, but
+              hear repeated back to me as well.
+            </IntroPitch>
+
+            <IntroPitch>
+              I sat down and figured out what I would need to do -
+            </IntroPitch>
+            <ol>
+              <li>
+                Align the text transcript to the timeline of the mp3 with a cool
+                tool called{" "}
+                <a href={"https://github.com/lowerquality/gentle"}>
+                  Gentle Aligner
+                </a>{" "}
+                to figure out where each sentence occurs in the waveform. This
+                would give me a JSON Object with each word of the transcript
+                aligned to a timecode.
+              </li>
+              <li>
+                Translate the english transcript using the Google Language API
+                to produce a french transcript with Node JS.
+              </li>
+              <li>
+                Combine the aligned english text from (1) with the french text
+                from (2) to produce a bilingual JSON array.
+              </li>
+              <li>Use that array as a navigation instrument for the mp3.</li>
+              <li>
+                Use that array to send the french text{" "}
+                <HighlightedWord>back</HighlightedWord> to the Google Speech API
+                to produce inidividual french mp3s.
+              </li>
+              <li>Wire it all up in React and Redux.</li>
+            </ol>
+            <body>
+              <FinalStandOut>
+                It took a lot of hacking away, but{" "}
+                <TLDRBtnSmaller onClick={goToNetlifyProject}>
+                  here it is{" "}
+                </TLDRBtnSmaller>
+                - a clickable React App that allows you to hear each speaker in
+                English, and then in French. All automatically generated!
+              </FinalStandOut>
+            </body>
           </Details>
         </Pitch>
 
+        <Tidbits>
+          Some other interesting tidbits behind the making of this app -
+          <ol>
+            <li>
+              I was running my own Node Express server to serve out the data
+              (the server is still up). I have a bunch of juicy JSON files from
+              all the transcribing code I've written. However, I've switched to
+              a bit bucket on Linode to serve out the JSON along with the
+              individual translated MP3 files because I'm about to tweet this
+              project out and I neeed a more robust solution.
+            </li>
+            <li>
+              I use the Google Text to Speech API, so I can use customized
+              female and male voices with Quebec accents. I switched from the
+              SpeechSynthesis framework because the voice results were too
+              variant across browsers and devices.
+            </li>
+
+            <li>
+              This is my graduation project for my Bootcamp, so I intend to
+              expand it quite a bit! There's no reason I can't add more
+              languages, or add meta-data from others APIs, etc. I'll be
+              graduating on November 18th, so I'll be adding to this project on
+              ongoing basis.
+            </li>
+          </ol>
+        </Tidbits>
         <FinalPart>
           <body>
             Thanks for your time - I know there are a lot of candidates, and I'm
-            looking forward to exploring how I can leverage my skillset for your
-            company.
+            looking forward to the opportunity to dive into the code and explain
+            a little bit of my thinking. It was super fun to put this together!
+          </body>
+          <body>
+            I made a bit of a subtle design choice by placing my github,
+            linkedIn and twitter links into my profile picture, so here they are
+            again -
           </body>
           <FinalButtons>
             <ProfileButtonInSentence onClick={goToGitHub}>
@@ -221,34 +219,6 @@ function Home() {
     </HomeWrapper>
   );
 }
-
-const SkillItem = styled.div``;
-
-const Skills = styled.div`
-  padding-top: 10px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-`;
-
-const SkillHeadline = styled.div`
-  font-family: Avenir Next;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 15px;
-  /* identical to box height, or 36px */
-
-  /* SUNRISE / Charcoal */
-  color: #00848e;
-`;
-
-const ProjectButtons = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding-top: 5px;
-  padding-bottom: 20px;
-  align-items: flex-start;
-`;
 
 const Headline = styled.div`
   font-family: Avenir Next;
@@ -304,7 +274,6 @@ const FinalPart = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   max-width: 800px;
-  padding-top: 20px;
 `;
 
 const Pitch = styled.div`
@@ -424,10 +393,9 @@ const TLDRBtn = styled.button`
 const TLDRBtnSmaller = styled.button`
   color: #00848e;
   background-color: transparent;
-  font-size: 15px;
+  font-size: 22px;
   font-weight: 500;
 
-  padding-top: 15px;
   border: transparent;
 
   @media (max-width: 800px) {
@@ -487,7 +455,6 @@ const ItemDetailsImage = styled.div`
 `;
 
 const IntroStatement = styled.div`
-  padding-top: 10px;
   margin-bottom: 20px;
   max-width: 800px;
 `;

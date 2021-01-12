@@ -137,9 +137,10 @@ text-transform: uppercase;
 }
 body
 {
-  font-size: 14px;
-line-height: 20px;
-font-weight: 400;
+  font-family: Avenir Next;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
 
   @media (max-width: 800px) {
     font-size: 15px;
