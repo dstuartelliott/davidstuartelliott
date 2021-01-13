@@ -19,11 +19,6 @@ import {
 import Journey from "./Journey.js";
 import Learned from "./Learned.js";
 
-function goToNetlifyProject() {
-  window.location.href =
-    "https://david-elliott-shopify-personal-project.netlify.app/";
-}
-
 function goToGitHubProject() {
   window.location.href =
     "https://github.com/dstuartelliott/shopify-podcast-translator";
@@ -320,7 +315,9 @@ function Home() {
           </Skills>
         </Pitch>
 
-        <Headline>What I've learned, shipping working code</Headline>
+        <HeadlineLearned>
+          What I've learned, shipping working code
+        </HeadlineLearned>
 
         <Learned></Learned>
 
@@ -398,18 +395,6 @@ function Home() {
   );
 }
 
-{
-  /* <AiTwotoneCi
-size={5}
-style={{
-  verticalAlign: "15%",
-  color: "gray",
-}}
-></AiTwotoneCi>{" "}
-React
- */
-}
-
 const SkillsListFlex = styled.div``;
 
 const SkillItem = styled.div``;
@@ -451,16 +436,16 @@ const Headline = styled.div`
   color: #37313c;
 `;
 
-const DisplayMedium = styled.div`
-  font-size: 26px;
-  line-height: 32px;
-  font-weight: 400;
+const HeadlineLearned = styled.div`
+  font-family: Avenir Next;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 25px;
+  padding-top: 20px;x
+  /* identical to box height, or 36px */
 
-  @media (max-width: 800px) {
-    font-size: 21px;
-    line-height: 28px;
-    font-weight: 400;
-  }
+  /* SUNRISE / Charcoal */
+  color: #37313c;
 `;
 
 const HomeDiv = styled.div`
@@ -502,37 +487,8 @@ const Pitch = styled.div`
   max-width: 800px;
 `;
 
-const Tidbits = styled.div`
-  max-width: 750px;
-  padding-top: 5px;
-`;
-
-const HighlightedWord = styled.span`
-  font-weight: bold;
-  color: black;
-`;
-
-const FinalStandOut = styled.div`
-  font-weight: bold;
-  color: black;
-`;
-
-const StandOut = styled.div`
-  font-weight: bold;
-  color: black;
-`;
-
-const StandOutBox = styled.div`
-  padding: 10px;
-`;
-
 const Details = styled.div`
   padding-top: 20px;
-`;
-
-const TLDR = styled.div`
-  /* background-color: #f4f6f8;
-  border-radius: 15px; */
 `;
 
 const ProfileButton = styled.button`
@@ -553,18 +509,6 @@ const ProfileButton = styled.button`
   border: 0px;
 `;
 
-const InvisibleButton = styled.button`
-  background-color: transparent;
-  :hover {
-    cursor: pointer;
-  }
-  :focus {
-    outline: none;
-  }
-
-  border: 0px;
-`;
-
 const ProfileButtonInSentence = styled.button`
   background-color: transparent;
   color: #00848e;
@@ -582,33 +526,6 @@ const ProfileButtonInSentence = styled.button`
   width: 50px;
   margin-bottom: 10px;
   border: 0px;
-`;
-
-const TLDRBtn = styled.button`
-  color: #00848e;
-  background-color: transparent;
-  font-size: 42px;
-  line-height: 44px;
-  font-weight: 500;
-
-  padding-left: 5px;
-  padding-right: 5px;
-  border: 1px dashed #003135;
-  padding-bottom: 5px;
-  padding-top: 0px;
-  margin-right: 5px;
-  margin-left: 5px;
-
-  @media (max-width: 800px) {
-    font-size: 27px;
-    line-height: 36px;
-    font-weight: 500;
-  }
-
-  border-radius: 3px;
-  :hover {
-    cursor: pointer;
-  }
 `;
 
 const TLDRBtnSmaller = styled.button`
@@ -682,7 +599,4 @@ const IntroStatement = styled.div`
   max-width: 800px;
 `;
 
-const NameText = styled.text`
-  color: #00848e;
-`;
 export default Home;

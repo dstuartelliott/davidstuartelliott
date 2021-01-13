@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import MenuComponent from "./MenuComponent";
-import { useSelector } from "react-redux";
 
 import TeenyBurgerComponent from "./SVGs/TeenyBurgerComponent";
 import { Spring, config } from "react-spring/renderprops";

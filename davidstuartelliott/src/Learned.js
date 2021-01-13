@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-import { AiFillFire } from "react-icons/ai";
 function Learned() {
   console.log("About");
 
@@ -50,17 +49,6 @@ function Learned() {
   );
 }
 
-const HeadlineCentered = styled.span`
-  font-family: Avenir Next;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 25px;
-  text-align: center; /* identical to box height, or 36px */
-
-  /* SUNRISE / Charcoal */
-  color: #37313c;
-`;
-
 const IntroPitch = styled.div`
   color: black;
   padding-top: 5px;
@@ -83,8 +71,6 @@ const LearnedWrapper = styled.div`
   flex-wrap: wrap;
   align-items: center;
 `;
-
-const HeadItem = styled.div``;
 
 const LearnedItem = styled.div`
   color: #00848e;
