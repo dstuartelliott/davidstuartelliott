@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Project from "./Project";
-import Home from "./Home";
+//import Home from "./Home";
 import Header from "./Header";
 import { createGlobalStyle } from "styled-components";
 
@@ -18,7 +18,8 @@ function App() {
               <Project />
             </Route>
             <Route exact path="/">
-              <Home />
+              <div>.... please stand by... updating...</div>
+              {/* <Home /> */}
             </Route>
           </Switch>
         </div>
