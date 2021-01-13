@@ -162,6 +162,12 @@ font-weight: 400;
     }
 }
 
+ul li {
+  margin-left: -22px;
+  padding-left: -10px;
+}
+
+
 
 
 

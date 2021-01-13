@@ -89,8 +89,8 @@ const JourneyText = styled.div`
   font-weight: 500;
   height: 40px;
   border-radius: 4px;
-  padding-left: 16px;
-  padding-top: 6px;
+  padding-left: 10px;
+  padding-top: 5px;
 `;
 
 const JourneyDates = styled.div`

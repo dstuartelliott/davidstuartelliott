@@ -13,9 +13,11 @@ import {
   AiFillGithub,
   AiFillTwitterCircle,
   AiFillLinkedin,
+  AiTwotoneCi,
 } from "react-icons/ai";
 
 import Journey from "./Journey.js";
+import Learned from "./Learned.js";
 
 function goToNetlifyProject() {
   window.location.href =
@@ -84,9 +86,9 @@ function Home() {
             Unversity - loved every minute of it - and graudated last November.
           </IntroPitch>
           <IntroPitch>
-            Since August, with the generous support of everyone at Telus
+            Since August, with the generous support of everyone at Telus in the
             Training department, I've been supplmenting my full-time job at as a
-            Training Manager with Front End development work at Telus Digital
+            Training Manager with Front End development work at Telus Digital.
           </IntroPitch>
 
           <IntroPitch>
@@ -103,50 +105,224 @@ function Home() {
           <Skills>
             <SkillItem>
               <SkillHeadline>Front End</SkillHeadline>
-              <ul>
-                <li>React </li>
-                <li>Redux </li>
-                <li>JavaScript ES6 </li>
-                <li>HTML </li>
-                <li>CSS</li>
-              </ul>
+              <SkillsListFlex>
+                <div>
+                  <AiTwotoneCi
+                    size={5}
+                    style={{
+                      verticalAlign: "15%",
+                      color: "gray",
+                    }}
+                  ></AiTwotoneCi>{" "}
+                  React
+                </div>
+
+                <div>
+                  <AiTwotoneCi
+                    size={5}
+                    style={{
+                      verticalAlign: "15%",
+                      color: "gray",
+                    }}
+                  ></AiTwotoneCi>{" "}
+                  Redux
+                </div>
+                <div>
+                  <AiTwotoneCi
+                    size={5}
+                    style={{
+                      verticalAlign: "15%",
+                      color: "gray",
+                    }}
+                  ></AiTwotoneCi>{" "}
+                  JavaScript ES6
+                </div>
+                <div>
+                  <AiTwotoneCi
+                    size={5}
+                    style={{
+                      verticalAlign: "15%",
+                      color: "gray",
+                    }}
+                  ></AiTwotoneCi>{" "}
+                  HTML
+                </div>
+                <div>
+                  <AiTwotoneCi
+                    size={5}
+                    style={{
+                      verticalAlign: "15%",
+                      color: "gray",
+                    }}
+                  ></AiTwotoneCi>{" "}
+                  CSS
+                </div>
+              </SkillsListFlex>
             </SkillItem>
             <SkillItem>
               <SkillHeadline>Back End</SkillHeadline>
-              <ul>
-                <li>Node.js </li>
-                <li>Express </li>
-                <li>MongoDB </li>
-              </ul>
+
+              <SkillsListFlex>
+                <div>
+                  <AiTwotoneCi
+                    size={5}
+                    style={{
+                      verticalAlign: "15%",
+                      color: "gray",
+                    }}
+                  ></AiTwotoneCi>{" "}
+                  Node.js
+                </div>
+
+                <div>
+                  <AiTwotoneCi
+                    size={5}
+                    style={{
+                      verticalAlign: "15%",
+                      color: "gray",
+                    }}
+                  ></AiTwotoneCi>{" "}
+                  Express
+                </div>
+                <div>
+                  <AiTwotoneCi
+                    size={5}
+                    style={{
+                      verticalAlign: "15%",
+                      color: "gray",
+                    }}
+                  ></AiTwotoneCi>{" "}
+                  MongoDB
+                </div>
+              </SkillsListFlex>
             </SkillItem>
             <SkillItem>
               <SkillHeadline>Testing </SkillHeadline>
-              <ul>
-                <li>Enzyme </li>
-                <li>Jest </li>
-                <li>React Testing Library </li>
-              </ul>
+
+              <SkillsListFlex>
+                <div>
+                  <AiTwotoneCi
+                    size={5}
+                    style={{
+                      verticalAlign: "15%",
+                      color: "gray",
+                    }}
+                  ></AiTwotoneCi>{" "}
+                  Enzyme
+                </div>
+
+                <div>
+                  <AiTwotoneCi
+                    size={5}
+                    style={{
+                      verticalAlign: "15%",
+                      color: "gray",
+                    }}
+                  ></AiTwotoneCi>{" "}
+                  Jest
+                </div>
+                <div>
+                  <AiTwotoneCi
+                    size={5}
+                    style={{
+                      verticalAlign: "15%",
+                      color: "gray",
+                    }}
+                  ></AiTwotoneCi>{" "}
+                  React Testing Library
+                </div>
+              </SkillsListFlex>
             </SkillItem>
             <SkillItem>
               <SkillHeadline>Mobile </SkillHeadline>
-              <ul>
-                <li>iOS Swift </li>
-                <li>iOS ARKit </li>
-              </ul>
+
+              <SkillsListFlex>
+                <div>
+                  <AiTwotoneCi
+                    size={5}
+                    style={{
+                      verticalAlign: "15%",
+                      color: "gray",
+                    }}
+                  ></AiTwotoneCi>{" "}
+                  iOS Swift
+                </div>
+
+                <div>
+                  <AiTwotoneCi
+                    size={5}
+                    style={{
+                      verticalAlign: "15%",
+                      color: "gray",
+                    }}
+                  ></AiTwotoneCi>{" "}
+                  iOS ARKit
+                </div>
+              </SkillsListFlex>
             </SkillItem>
             <SkillItem>
               <SkillHeadline>Tools </SkillHeadline>
-              <ul>
-                <li>Jira & Trello </li>
-                <li>GitHub </li>
-                <li>NPM </li>
-                <li>VS Code </li>
-                <li>Photoshop & Captivate </li>
-                <li>Figma</li>
-              </ul>
+
+              <SkillsListFlex>
+                <div>
+                  <AiTwotoneCi
+                    size={5}
+                    style={{
+                      verticalAlign: "15%",
+                      color: "gray",
+                    }}
+                  ></AiTwotoneCi>{" "}
+                  Jira & Trello
+                </div>
+
+                <div>
+                  <AiTwotoneCi
+                    size={5}
+                    style={{
+                      verticalAlign: "15%",
+                      color: "gray",
+                    }}
+                  ></AiTwotoneCi>{" "}
+                  Git CLI & GitHub
+                </div>
+                <div>
+                  <AiTwotoneCi
+                    size={5}
+                    style={{
+                      verticalAlign: "15%",
+                      color: "gray",
+                    }}
+                  ></AiTwotoneCi>{" "}
+                  NPM & Yarn
+                </div>
+                <div>
+                  <AiTwotoneCi
+                    size={5}
+                    style={{
+                      verticalAlign: "15%",
+                      color: "gray",
+                    }}
+                  ></AiTwotoneCi>{" "}
+                  VS Code
+                </div>
+                <div>
+                  <AiTwotoneCi
+                    size={5}
+                    style={{
+                      verticalAlign: "15%",
+                      color: "gray",
+                    }}
+                  ></AiTwotoneCi>{" "}
+                  Photoshop & Figma
+                </div>
+              </SkillsListFlex>
             </SkillItem>
           </Skills>
         </Pitch>
+
+        <Headline>What I've learned, shipping working code</Headline>
+
+        <Learned></Learned>
 
         <Pitch>
           <Headline>FullStack Graduation Project - How People Talk</Headline>
@@ -222,6 +398,20 @@ function Home() {
   );
 }
 
+{
+  /* <AiTwotoneCi
+size={5}
+style={{
+  verticalAlign: "15%",
+  color: "gray",
+}}
+></AiTwotoneCi>{" "}
+React
+ */
+}
+
+const SkillsListFlex = styled.div``;
+
 const SkillItem = styled.div``;
 
 const Skills = styled.div`
@@ -283,16 +473,6 @@ const HomeWrapper = styled.div`
   align-items: center;
 `;
 
-const IntroPitch = styled.div`
-  color: black;
-  padding-top: 5px;
-
-  font-family: Avenir Next;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 13px;
-`;
-
 const FinalButtons = styled.div`
   display: flex;
   flex-direction: row;
@@ -305,6 +485,16 @@ const FinalPart = styled.div`
   justify-content: flex-start;
   max-width: 800px;
   padding-top: 20px;
+`;
+
+const IntroPitch = styled.div`
+  color: black;
+  padding-top: 5px;
+
+  font-family: Avenir Next;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
 `;
 
 const Pitch = styled.div`

@@ -60,10 +60,10 @@ function TopFigma() {
                 <Spring
                   config={config.stiff}
                   from={{
-                    height: toggle ? "80px" : "100px",
+                    height: toggle ? "50px" : "100px",
                   }}
                   to={{
-                    height: toggle ? "100px" : "80px",
+                    height: toggle ? "100px" : "50px",
                   }}
                 >
                   {(props) => (
@@ -72,10 +72,16 @@ function TopFigma() {
                         stroke={sunlightProps.stroke}
                         height={props.height}
                       >
-                        I'm pivoting from a rewarding career in adult learning
-                        and leadership to a love of code. I'm determined to
-                        become a full time developer, and I'd love to chat about
-                        available roles in your organization.
+                        <HeaderText>
+                          I'm pivoting from a rewarding career in adult learning
+                          and leadership to a love of code.
+                        </HeaderText>
+
+                        <HeaderText>
+                          I'm determined to become a full time developer, and
+                          I'd love to chat about available roles in your
+                          organization.
+                        </HeaderText>
                       </PodcastEpisodeDescription>
                     </TextAndDownArrow>
                   )}
@@ -194,6 +200,13 @@ const PodcastEpisodeTitle = styled.div`
   -webkit-text-fill-color: transparent;
 
   color: #37313c;
+`;
+
+const HeaderText = styled.div`
+  font-family: Avenir Next;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
 `;
 
 const MenuHeader = styled.div`
