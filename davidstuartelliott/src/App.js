@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Project from "./Project";
 //import Home from "./Home";
 import Header from "./Header";
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 
 function App() {
   return (
@@ -18,7 +18,14 @@ function App() {
               <Project />
             </Route>
             <Route exact path="/">
-              <div>.... please stand by... updating...</div>
+              <StandBy>
+                <div>.... please stand by... updating...</div>
+                <div>
+                  In the meantine, please visit{" "}
+                  <a href="https://www.howpeopletalk.com">HowPeopleTalk.com</a>
+                </div>
+              </StandBy>
+
               {/* <Home /> */}
             </Route>
           </Switch>
@@ -27,6 +34,23 @@ function App() {
     </div>
   );
 }
+
+const StandBy = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-family: Avenir Next;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 25px;
+  padding-top: 20px;x
+  /* identical to box height, or 36px */
+
+  /* SUNRISE / Charcoal */
+  color: #37313c;
+`;
+
 const GlobalStyles = createGlobalStyle`
   * {
     font-family: 'Lato', sans-serif;
