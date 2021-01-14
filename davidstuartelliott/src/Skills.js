@@ -230,7 +230,7 @@ function Skills() {
                     color: "gray",
                   }}
                 ></AiTwotoneCi>{" "}
-                React Testing Library{" "}
+                React Testing Lib{" "}
               </div>
 
               <div>
@@ -287,8 +287,6 @@ const SkillsCoupleRight = styled.div`
   width: 350px;
   @media (max-width: 800px) {
     width: 500px;
-    padding-right: 0px;
-    padding-left: 0px;
     justify-content: center;
 
     padding-bottom: 20px;
@@ -296,7 +294,7 @@ const SkillsCoupleRight = styled.div`
 `;
 
 const SkillsListFlex = styled.div`
-  width: 140px;
+  width: 120px;
 `;
 
 const SkillItem = styled.div``;
@@ -330,6 +328,9 @@ const SkillHeadline = styled.div`
 const Pitch = styled.div`
   padding-top: 20px;
   /* max-width: 800px; */
+  @media (max-width: 800px) {
+    width: 400px;
+  }
 `;
 
 export default Skills;
