@@ -86,7 +86,7 @@ function Home() {
             </IntroPitch>
             <IntroPitch>
               Last year, I enrolled in the Full Stack Bootcamp at Concordia
-              Unversity - loved every minute of it - and graudated last
+              Unversity - loved every minute of it - and graduated last
               November.
             </IntroPitch>
             <IntroPitch>
