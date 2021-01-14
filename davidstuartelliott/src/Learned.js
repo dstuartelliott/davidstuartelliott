@@ -61,6 +61,7 @@ const LearnedWrapper = styled.div`
   align-items: center;
   @media (max-width: 800px) {
     flex-direction: column;
+    width: 400px;
   }
 `;
 

@@ -101,6 +101,7 @@ function Home() {
 
           <Headline>From Design, to Leadership, to Development</Headline>
           <Journey />
+
           <LearningsDiv>
             <Headline>Key Learnings</Headline>
             <Learned></Learned>
