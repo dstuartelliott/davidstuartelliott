@@ -5,37 +5,40 @@ function Learned() {
   console.log("About");
 
   return (
-    <CenteringFlex>
+    <div>
       <IntroPitch>
         During the Concordia Bootcamp and at Telus Digital, I've learned a few
         principles to focus on while developing...
       </IntroPitch>
 
-      <LearnedWrapper>
-        <LearnedItem>
-          <LearnedText>Collaboration is a super-power</LearnedText>
+      <CenteringFlex>
+        <LearnedWrapper>
+          <LearnedItem>
+            <LearnedText>Collaboration is a super-power</LearnedText>
 
-          <LearnedSubText>
-            Chatting, pairing, good comments are more important now than ever
-          </LearnedSubText>
-        </LearnedItem>
+            <LearnedSubText>
+              Chatting, pairing, good comments are more important now than ever
+            </LearnedSubText>
+          </LearnedItem>
 
-        <LearnedItem>
-          <LearnedText>Keep pushing to learn </LearnedText>
+          <LearnedItem>
+            <LearnedText>Keep pushing to learn </LearnedText>
 
-          <LearnedSubText>
-            Since graduating I've already taken on three new technologies
-          </LearnedSubText>
-        </LearnedItem>
+            <LearnedSubText>
+              Since graduating I've already taken on three new technologies
+            </LearnedSubText>
+          </LearnedItem>
 
-        <LearnedItem>
-          <LearnedText>Test, lint, then test again</LearnedText>
-          <LearnedSubText>
-            Code should be tested and legible. Good tests are a great invesment.
-          </LearnedSubText>
-        </LearnedItem>
-      </LearnedWrapper>
-    </CenteringFlex>
+          <LearnedItem>
+            <LearnedText>Test, lint, then test again</LearnedText>
+            <LearnedSubText>
+              Code should be tested and legible. Good tests are a great
+              invesment.
+            </LearnedSubText>
+          </LearnedItem>
+        </LearnedWrapper>
+      </CenteringFlex>
+    </div>
   );
 }
 

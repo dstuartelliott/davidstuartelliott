@@ -37,6 +37,11 @@ function MenuComponent() {
             Projects
           </MenuItemLink>
         </MenuItemWrapper>
+        <MenuItemWrapper>
+          <MenuItemLink smooth to="/#ContactInfo">
+            Contact
+          </MenuItemLink>
+        </MenuItemWrapper>
 
         <MenuItemWrapper>
           <MenuItemExternalLink onClick={goToTwitter}>
@@ -51,12 +56,6 @@ function MenuComponent() {
         </MenuItemWrapper>
         <MenuItemWrapper>
           <MenuItemExternalLink onClick={goToLi}>LinkedIn</MenuItemExternalLink>
-        </MenuItemWrapper>
-
-        <MenuItemWrapper>
-          <MenuItemLink smooth to="/#ContactInfo">
-            Contact Info
-          </MenuItemLink>
         </MenuItemWrapper>
       </InternalMenu>
     </Wrapper>
