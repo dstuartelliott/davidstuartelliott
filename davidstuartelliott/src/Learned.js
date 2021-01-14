@@ -52,6 +52,7 @@ const IntroPitch = styled.div`
 const CenteringFlex = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
 `;
 
 const LearnedWrapper = styled.div`
