@@ -121,12 +121,12 @@ function Home() {
                 FullStack Graduation Project - How People Talk
               </HeadlineSub>
               <IntroPitch>
-                This is a podcast app that I made for non-english speakers can
-                use to learn conversational english.
+                This is a podcast app that I made for non-english speakers, who
+                can use it to learn conversational english.
               </IntroPitch>
               <IntroPitch>
-                Episodes repeated back to you in your native tongue with a local
-                accent. I'm using it to learn Quebec-specific french!
+                Episodes are repeated back to you in your native tongue with a
+                local accent. I'm using it to learn Quebec-specific french!
               </IntroPitch>
               <IntroPitch>
                 I wanted to push myself to stretch both back-end and front-end
