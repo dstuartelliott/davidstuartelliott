@@ -162,7 +162,7 @@ function Home() {
               <IntroPitch>
                 I learned how to use a Contentful CRM, Enzyme, and Jest - but
                 most importantly, I learned how I can fit in the rituals and
-                ryhtms of daily agile software development. Turns out, it's a
+                rhythms of daily agile software development. Turns out, it's a
                 pretty good fit!
               </IntroPitch>
 
