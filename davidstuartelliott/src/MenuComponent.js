@@ -22,22 +22,28 @@ function MenuComponent() {
     <Wrapper>
       <InternalMenu>
         <MenuItemWrapper>
+          <HashLink to="/some/path#with-hash-fragment">
+            Link to Hash Fragment
+          </HashLink>
+
           <MenuItemLink to="/">Skills</MenuItemLink>
         </MenuItemWrapper>
         <MenuItemWrapper>
           <MenuItemLink to="/podcastsearch">Story</MenuItemLink>
         </MenuItemWrapper>
         <MenuItemWrapper>
+          <MenuItemLink to="/selectedpodcasts">Twitter</MenuItemLink>
+        </MenuItemWrapper>
+
+        <MenuItemWrapper>
           <MenuItemLink to="/selectedpodcasts">Github</MenuItemLink>
         </MenuItemWrapper>
         <MenuItemWrapper>
           <MenuItemLink to="/selectedpodcasts">LinkedIn</MenuItemLink>
         </MenuItemWrapper>
+
         <MenuItemWrapper>
-          <MenuItemLink to="/selectedpodcasts">Twitter</MenuItemLink>
-        </MenuItemWrapper>
-        <MenuItemWrapper>
-          <MenuItemLink to="/selectedpodcasts">Contact</MenuItemLink>
+          <MenuItemLink to="/selectedpodcasts">Contact Info</MenuItemLink>
         </MenuItemWrapper>
       </InternalMenu>
     </Wrapper>
@@ -71,7 +77,7 @@ const InternalMenu = styled.div`
   border-radius: 5px;
   display: flex;
   flex-direction: column;
-  padding-top: 20px;
+  padding-top: 5px;
 `;
 
 const Wrapper = styled.div``;
