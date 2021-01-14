@@ -99,7 +99,6 @@ const LearnedText = styled.div`
   font-weight: 500;
   padding-bottom: 5px;
   border-radius: 4px;
-  padding-left: 5px;
   padding-top: 5px;
   text-align: center;
   @media (max-width: 800px) {
