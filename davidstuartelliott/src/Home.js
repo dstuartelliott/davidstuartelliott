@@ -13,15 +13,19 @@ import {
   AiFillGithub,
   AiFillTwitterCircle,
   AiFillLinkedin,
-  AiTwotoneCi,
 } from "react-icons/ai";
 
 import Journey from "./Journey.js";
 import Learned from "./Learned.js";
+import Skills from "./Skills.js";
 
 function goToGitHubProject() {
   window.location.href =
     "https://github.com/dstuartelliott/shopify-podcast-translator";
+}
+
+function goToTelusBrandHub() {
+  window.location.href = "https://brand.telus.com/";
 }
 
 function goToHowPeopleTalk() {
@@ -29,7 +33,7 @@ function goToHowPeopleTalk() {
 }
 
 function goToGitHub() {
-  window.location.href = "https://github.com/davidelliott007";
+  window.location.href = "https://github.com/dstuartelliott";
 }
 
 function goToLi() {
@@ -96,32 +100,120 @@ function Home() {
 
           <Headline>From Design, to Leadership, to Development</Headline>
           <Journey />
+          <Skills />
+          <Projects>
+            <Headline>Projects</Headline>
+
+            <Pitch>
+              <Headline>
+                FullStack Graduation Project - How People Talk
+              </Headline>
+              <IntroPitch>
+                This is a podcast app that I made for non-english speakers can
+                use to learn conversational english.
+              </IntroPitch>
+              <IntroPitch>
+                Episodes repeated back to you in your native tongue with a local
+                accent. I'm using it to learn Quebec-specific french!
+              </IntroPitch>
+              <IntroPitch>
+                I wanted to push myself to stretch both back-end and front-end
+                skills. Google Translate APIs, React Spring Animations, Custom
+                Audio Players - I'd love to chat more with you about my choices
+                around the stack here!
+              </IntroPitch>
+              <Details>
+                <AppDetailsImg
+                  image_source={HowImg1}
+                  smaller_source={HowImg1}
+                ></AppDetailsImg>
+
+                <ProjectButtons>
+                  <TLDRBtnSmaller onClick={goToHowPeopleTalk}>
+                    howpeopletalk.com
+                  </TLDRBtnSmaller>
+                  <TLDRBtnSmaller onClick={goToGitHubProject}>
+                    Explore GitHub Repo for HowPeopleTalk
+                  </TLDRBtnSmaller>
+                </ProjectButtons>
+              </Details>
+
+              <Headline>Telus Digital Internship - Brand Hub</Headline>
+              <IntroPitch>
+                An internal Telus Site that showcases Brand assets and
+                guidelines. I'm helping out on a new version that has been
+                partially launched.
+              </IntroPitch>
+              <IntroPitch>
+                I develop Front End changes, I collaborate with my fellow devs,
+                and I test and merge PRs with our internal GitHub.
+              </IntroPitch>
+              <IntroPitch>
+                This is an internal product, but I'm happy to discuss the tools
+                and processes used to develop it.
+              </IntroPitch>
+              <IntroPitch>
+                I learned how to use a Contentful CRM, Enzyme, and Jest - but
+                most importantly, I learned how I can fit in the rituals and
+                ryhtms of daily agile software development. Turns out, it's a
+                pretty good fit!
+              </IntroPitch>
+
+              <Details>
+                <AppDetailsImg
+                  image_source={TelusImg1}
+                  smaller_source={TelusImg1}
+                ></AppDetailsImg>
+              </Details>
+              <TLDRBtnSmaller onClick={goToTelusBrandHub}>
+                Telus Brand Hub
+              </TLDRBtnSmaller>
+            </Pitch>
+          </Projects>
+
+          <FinalPart>
+            <Headline>Let's Chat</Headline>
+
+            <IntroPitch>
+              Well, that's my pitch! I bring a love of collaboration and
+              curiosity to work that I do, and development work is the perfect
+              fit for me. I hope I can discuss how that can work for your
+              company.
+            </IntroPitch>
+            <IntroPitch>
+              Thanks for your time - I know there are a lot of candidates, and I
+              appreciate you reviewing my portfolio.
+            </IntroPitch>
+
+            <IntroPitch>Best, Dave Elliott </IntroPitch>
+            <FinalButtons>
+              <ProfileButtonInSentence onClick={goToGitHub}>
+                <AiFillGithub size={50} style={{ verticalAlign: "middle" }} />
+              </ProfileButtonInSentence>
+              <ProfileButtonInSentence onClick={goToLi}>
+                <AiFillLinkedin size={50} style={{ verticalAlign: "middle" }} />
+              </ProfileButtonInSentence>
+              <ProfileButtonInSentence onClick={goToTwitter}>
+                <AiFillTwitterCircle
+                  size={50}
+                  style={{ verticalAlign: "middle" }}
+                />
+              </ProfileButtonInSentence>
+            </FinalButtons>
+          </FinalPart>
         </CenterCol>
       </HomeDiv>
     </HomeWrapper>
   );
 }
 
-const SkillsListFlex = styled.div``;
-
-const SkillItem = styled.div``;
-
-const Skills = styled.div`
-  padding-top: 10px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+const Projects = styled.div`
+  padding-top: 30px;
 `;
 
-const SkillHeadline = styled.div`
-  font-family: Avenir Next;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 15px;
-  /* identical to box height, or 36px */
-
-  /* SUNRISE / Charcoal */
-  color: #00848e;
+const Pitch = styled.div`
+  padding-top: 20px;
+  /* max-width: 800px; */
 `;
 
 const ProjectButtons = styled.div`
@@ -201,14 +293,7 @@ const FinalPart = styled.div`
   padding-top: 20px;
 `;
 
-const Pitch = styled.div`
-  padding-top: 20px;
-  /* max-width: 800px; */
-`;
-
-const Details = styled.div`
-  padding-top: 20px;
-`;
+const Details = styled.div``;
 
 const ProfileButton = styled.button`
   background-color: transparent;
@@ -252,15 +337,11 @@ const TLDRBtnSmaller = styled.button`
   background-color: transparent;
   font-size: 15px;
   font-weight: 500;
+  margin-left: -8px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 
-  padding-top: 15px;
   border: transparent;
-
-  @media (max-width: 800px) {
-    font-size: 27px;
-    line-height: 36px;
-    font-weight: 500;
-  }
 
   border-radius: 3px;
   :hover {
@@ -278,7 +359,9 @@ const ProfileButtons = styled.div`
 const AppDetailsImg = styled.div`
   background-image: url("${(props) => props.image_source}");
   height: 400px;
-  padding: 20px;
+
+margin-top: 10px;
+margin-bottom: 10px;
 
   background-size: cover;
   background-repeat: no-repeat;
@@ -288,8 +371,12 @@ const AppDetailsImg = styled.div`
   z-index: 1;
 
   @media (max-width: 800px) {
-    background-image: url("${(props) => props.smaller_source}");
-    background-position: center;
+    background-size: contain;
+    background-position: top;
+    height: 250px;
+
+
+  }
   }
 `;
 
