@@ -44,7 +44,7 @@ function Journey() {
         />
       </StyledArrow>
       <JourneyDottedBox>
-        <JourneyText>Full Stack Concorida University BootCamp</JourneyText>
+        <JourneyText>Full Stack Concordia University BootCamp</JourneyText>
         <JourneyDates>
           10<JourneyDatesText>Months</JourneyDatesText>
         </JourneyDates>
