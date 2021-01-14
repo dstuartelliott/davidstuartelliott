@@ -68,9 +68,12 @@ function Home() {
               </ProfileButton>
             </ProfileButtons>
           </ItemDetailsImage>
-
           <IntroStatement id="Story">
-            <Headline>My Story</Headline>
+            <TitleFlex>
+              <SeperatorRTop></SeperatorRTop>
+              <Headline> My Story</Headline>
+              <SeperatorLTop></SeperatorLTop>
+            </TitleFlex>
 
             <IntroPitch>
               My career has been based on pursuing jobs that leverage deep work
@@ -98,24 +101,25 @@ function Home() {
               make, and every standup I go to is, frankly, joyful.
             </IntroPitch>
           </IntroStatement>
-
-          <Headline>From Design, to Leadership, to Development</Headline>
+          <HeadlineSub>From Design, to Leadership, to Development</HeadlineSub>
           <Journey />
-
           <LearningsDiv>
-            <Headline>Key Learnings</Headline>
+            <HeadlineSub>Key Learnings</HeadlineSub>
             <Learned></Learned>
           </LearningsDiv>
-
-          <Skills id="Skills" />
-
+          <span id="Skills"></span>
+          <Skills />
           <Projects id="Projects">
-            <Headline>Projects</Headline>
+            <TitleFlex>
+              <SeperatorR></SeperatorR>
+              <Headline> Projects</Headline>
+              <SeperatorL></SeperatorL>
+            </TitleFlex>
 
             <Pitch>
-              <Headline>
+              <HeadlineSub>
                 FullStack Graduation Project - How People Talk
-              </Headline>
+              </HeadlineSub>
               <IntroPitch>
                 This is a podcast app that I made for non-english speakers can
                 use to learn conversational english.
@@ -146,7 +150,7 @@ function Home() {
                 </ProjectButtons>
               </Details>
 
-              <Headline>Telus Digital Internship - Brand Hub</Headline>
+              <HeadlineSub>Telus Digital Internship - Brand Hub</HeadlineSub>
               <IntroPitch>
                 An internal Telus Site that showcases Brand assets and
                 guidelines. I'm helping out on a new version that has been
@@ -178,36 +182,43 @@ function Home() {
               </TLDRBtnSmaller>
             </Pitch>
           </Projects>
-
           <FinalPart id="ContactInfo">
             <Headline>Let's Chat</Headline>
 
-            <IntroPitch>
-              Well, that's my pitch! I bring a love of collaboration and
-              curiosity to work that I do, and development work is the perfect
-              fit for me. I hope I can discuss how that can work for your
-              company.
-            </IntroPitch>
-            <IntroPitch>
-              Thanks for your time - I know there are a lot of candidates, and I
-              appreciate you reviewing my portfolio.
-            </IntroPitch>
+            <FinalText>
+              <IntroPitch>
+                Well, that's my pitch! I bring a love of collaboration and
+                curiosity to work that I do, and development work is the perfect
+                fit for me. I hope I can discuss how that can work for your
+                company.
+              </IntroPitch>
+              <IntroPitch>
+                Thanks for your time - I know there are a lot of candidates, and
+                I appreciate you reviewing my portfolio.
+              </IntroPitch>
 
-            <IntroPitch>Best, Dave Elliott </IntroPitch>
-            <FinalButtons>
-              <ProfileButtonInSentence onClick={goToGitHub}>
-                <AiFillGithub size={50} style={{ verticalAlign: "middle" }} />
-              </ProfileButtonInSentence>
-              <ProfileButtonInSentence onClick={goToLi}>
-                <AiFillLinkedin size={50} style={{ verticalAlign: "middle" }} />
-              </ProfileButtonInSentence>
-              <ProfileButtonInSentence onClick={goToTwitter}>
-                <AiFillTwitterCircle
-                  size={50}
-                  style={{ verticalAlign: "middle" }}
-                />
-              </ProfileButtonInSentence>
-            </FinalButtons>
+              <IntroPitch>Best, Dave Elliott </IntroPitch>
+            </FinalText>
+            <ContactInfo>
+              <Headline>Contacts</Headline>
+              <FinalButtons>
+                <ProfileButtonInSentence onClick={goToGitHub}>
+                  <AiFillGithub size={50} style={{ verticalAlign: "middle" }} />
+                </ProfileButtonInSentence>
+                <ProfileButtonInSentence onClick={goToLi}>
+                  <AiFillLinkedin
+                    size={50}
+                    style={{ verticalAlign: "middle" }}
+                  />
+                </ProfileButtonInSentence>
+                <ProfileButtonInSentence onClick={goToTwitter}>
+                  <AiFillTwitterCircle
+                    size={50}
+                    style={{ verticalAlign: "middle" }}
+                  />
+                </ProfileButtonInSentence>
+              </FinalButtons>
+            </ContactInfo>
           </FinalPart>
         </CenterCol>
       </HomeDiv>
@@ -215,13 +226,55 @@ function Home() {
   );
 }
 
+const ContactInfo = styled.div`
+  padding-top: 20px;
+`;
+
+const TitleFlex = styled.div`
+  display: flex;
+`;
+
+const SeperatorLTop = styled.div`
+  margin-left: 10px;
+
+  border-bottom: 1px solid #005c63;
+  flex-grow: 2;
+  align-self: center;
+`;
+
+const SeperatorRTop = styled.div`
+  margin-right: 10px;
+
+  border-bottom: 1px solid #005c63;
+  flex-grow: 2;
+  align-self: center;
+`;
+
+const SeperatorL = styled.div`
+  margin-left: 10px;
+
+  border-bottom: 1px solid #e2c465;
+  flex-grow: 2;
+  align-self: center;
+`;
+
+const SeperatorR = styled.div`
+  margin-right: 10px;
+
+  border-bottom: 1px solid #e2c465;
+  flex-grow: 2;
+  align-self: center;
+`;
+
+const FinalText = styled.div`
+  padding-top: 10px;
+`;
+
 const LearningsDiv = styled.div`
   padding-top: 15px;
 `;
 
-const Projects = styled.div`
-  padding-top: 30px;
-`;
+const Projects = styled.div``;
 
 const Pitch = styled.div`
   padding-top: 20px;
@@ -249,6 +302,21 @@ const Headline = styled.div`
   @media (max-width: 800px) {
     font-size: 19px;
     text-align: justify;
+  }
+`;
+
+const HeadlineSub = styled.div`
+  font-family: Avenir Next;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  /* identical to box height, or 36px */
+
+  /* SUNRISE / Charcoal */
+  color: #37313c;
+
+  @media (max-width: 800px) {
+    font-size: 18px;
   }
 `;
 
@@ -282,7 +350,7 @@ const FinalPart = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   /* max-width: 800px; */
-  padding-top: 20px;
+  padding-top: 30px;
 `;
 
 const Details = styled.div``;

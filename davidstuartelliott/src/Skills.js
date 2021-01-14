@@ -264,6 +264,8 @@ const Headline = styled.div`
   color: #37313c;
 
   @media (max-width: 800px) {
+    padding-top: 20px;
+
     font-size: 19px;
   }
 `;
@@ -328,7 +330,10 @@ const SkillHeadline = styled.div`
     font-size: 13px;
   }
 `;
-const Pitch = styled.div``;
+const Pitch = styled.div`
+  padding-top: 30px;
+  padding-bottom: 40px;
+`;
 
 const CenteringDiv = styled.div`
   display: flex;
