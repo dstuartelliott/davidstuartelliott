@@ -267,6 +267,8 @@ const HomeDiv = styled.div`
 
 const CenterCol = styled.div`
   max-width: 800px;
+  margin-left: 10px;
+  margin-right: 10px;
 `;
 
 const FinalButtons = styled.div`
