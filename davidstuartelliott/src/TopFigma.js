@@ -4,6 +4,8 @@ import MenuComponent from "./MenuComponent";
 
 import TeenyBurgerComponent from "./SVGs/TeenyBurgerComponent";
 import { Spring, config } from "react-spring/renderprops";
+// eslint-disable-next-line
+import { HashLink as Link } from "react-router-hash-link";
 
 function TopFigma() {
   const [burgerToggle, setBurgerToggle] = React.useState(false);
@@ -67,10 +69,7 @@ function TopFigma() {
                 >
                   {(props) => (
                     <TextAndDownArrow>
-                      <PodcastEpisodeDescription
-                        stroke={sunlightProps.stroke}
-                        height={props.height}
-                      >
+                      <PodcastEpisodeDescription height={props.height}>
                         <HeaderText>
                           I'm pivoting from a rewarding career in adult learning
                           and leadership to a love of code.
@@ -107,12 +106,12 @@ function TopFigma() {
                   force
                   config={{ tension: 2000, friction: 100, precision: 1 }}
                   from={{
-                    width: toggle ? 0 : 180,
+                    width: toggle ? 0 : 140,
                     height: toggle ? 0 : 200,
                     paddingLeft: toggle ? 0 : 5,
                   }}
                   to={{
-                    width: toggle ? 180 : 0,
+                    width: toggle ? 140 : 0,
                     height: toggle ? 200 : 0,
                     paddingLeft: toggle ? 5 : 0,
                   }}
@@ -167,16 +166,11 @@ const PodcastEpisodeDescription = styled.div`
   text-align: justify;
   height: ${(props) => props.height};
 
-  background: radial-gradient(circle at 0%, #37313c, ${(props) => props.stroke})
-    no-repeat;
-  -webkit-background-clip: text;
-  background-clip: text;
-
-  -webkit-text-fill-color: transparent;
-
   color: #37313c;
-
-  overflow-y: hidden;
+  @media (max-width: 799px) {
+    padding-bottom: 30px;
+    padding-top: 10px;
+  }
 
   /* SUNRISE / Text Grey */
 
@@ -206,11 +200,11 @@ const HeaderText = styled.div`
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
+  color: #37313c;
 `;
 
 const MenuHeader = styled.div`
   left: 0px;
-  width: 100%;
   display: flex;
   justify-content: flex-end;
 `;
