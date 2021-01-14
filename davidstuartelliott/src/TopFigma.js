@@ -4,6 +4,7 @@ import MenuComponent from "./MenuComponent";
 
 import TeenyBurgerComponent from "./SVGs/TeenyBurgerComponent";
 import { Spring, config } from "react-spring/renderprops";
+// eslint-disable-next-line
 import { HashLink as Link } from "react-router-hash-link";
 
 function TopFigma() {

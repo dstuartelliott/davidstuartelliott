@@ -2,9 +2,18 @@ import React from "react";
 
 import styled from "styled-components";
 
-import { NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+function goToGitHub() {
+  window.location.href = "https://github.com/dstuartelliott";
+}
+
+function goToLi() {
+  window.location.href = "https://www.linkedin.com/in/david-elliott-montreal/";
+}
+
+function goToTwitter() {
+  window.location.href = "https://twitter.com/DStuartElliott";
+}
 
 function MenuComponent() {
   // eslint-disable-next-line
@@ -13,29 +22,41 @@ function MenuComponent() {
     <Wrapper>
       <InternalMenu>
         <MenuItemWrapper>
-          <MenuItemLink to="/#Story">Story</MenuItemLink>
+          <MenuItemLink smooth to="/#Story">
+            Story
+          </MenuItemLink>
         </MenuItemWrapper>
         <MenuItemWrapper>
-          <MenuItemLink to="/#Skills">Skills</MenuItemLink>
-        </MenuItemWrapper>
-
-        <MenuItemWrapper>
-          <MenuItemLink to="/selectedpodcasts">Projects</MenuItemLink>
-        </MenuItemWrapper>
-
-        <MenuItemWrapper>
-          <MenuItemLink to="/selectedpodcasts">Twitter</MenuItemLink>
+          <MenuItemLink smooth to="/#Skills">
+            Skills
+          </MenuItemLink>
         </MenuItemWrapper>
 
         <MenuItemWrapper>
-          <MenuItemLink to="/selectedpodcasts">Github</MenuItemLink>
-        </MenuItemWrapper>
-        <MenuItemWrapper>
-          <MenuItemLink to="/selectedpodcasts">LinkedIn</MenuItemLink>
+          <MenuItemLink smooth to="/#Projects">
+            Projects
+          </MenuItemLink>
         </MenuItemWrapper>
 
         <MenuItemWrapper>
-          <MenuItemLink to="/selectedpodcasts">Contact Info</MenuItemLink>
+          <MenuItemExternalLink onClick={goToTwitter}>
+            Twitter
+          </MenuItemExternalLink>
+        </MenuItemWrapper>
+
+        <MenuItemWrapper>
+          <MenuItemExternalLink onClick={goToGitHub}>
+            Github
+          </MenuItemExternalLink>
+        </MenuItemWrapper>
+        <MenuItemWrapper>
+          <MenuItemExternalLink onClick={goToLi}>LinkedIn</MenuItemExternalLink>
+        </MenuItemWrapper>
+
+        <MenuItemWrapper>
+          <MenuItemLink smooth to="/#ContactInfo">
+            Contact Info
+          </MenuItemLink>
         </MenuItemWrapper>
       </InternalMenu>
     </Wrapper>
@@ -53,6 +74,40 @@ const MenuItemLink = styled(HashLink)`
   font-family: Avenir Next;
   font-style: normal;
   font-size: 15px;
+
+  color: #20404e;
+  text-decoration: none;
+  :hover {
+    color: #00848e;
+    cursor: hand;
+  }
+`;
+
+// const MenuItemExternalLink = styled.div`
+//   height: 25px;
+//   padding: 10px;
+
+//   font-family: Avenir Next;
+//   font-style: normal;
+//   font-size: 15px;
+
+//   color: #20404e;
+//   text-decoration: none;
+//   :hover {
+//     color: #091216;
+//     cursor: hand;
+//   }
+// `;
+
+const MenuItemExternalLink = styled.button`
+  height: 25px;
+
+  font-family: Avenir Next;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 15px;
+  background-color: transparent;
+  border: 0px;
 
   color: #20404e;
   text-decoration: none;

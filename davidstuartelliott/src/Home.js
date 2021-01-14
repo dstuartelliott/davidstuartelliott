@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-import SmallerSource from "./images/self_square.jpg"; // Tell webpack this JS file uses this image
 import TopFigma from "./TopFigma";
 
 import DaveSrc from "./images/self_portfolio.jpg"; // Tell webpack this JS file uses this image
@@ -70,8 +69,10 @@ function Home() {
             </ProfileButtons>
           </ItemDetailsImage>
 
-          <IntroStatement>
-            <IntroPitch id="yourAnchorTag">
+          <IntroStatement id="Story">
+            <Headline>My Story</Headline>
+
+            <IntroPitch>
               My career has been based on pursuing jobs that leverage deep work
               and intense collaboration.
             </IntroPitch>
@@ -100,8 +101,14 @@ function Home() {
 
           <Headline>From Design, to Leadership, to Development</Headline>
           <Journey />
-          <Skills />
-          <Projects>
+          <LearningsDiv>
+            <Headline>Key Learnings</Headline>
+            <Learned></Learned>
+          </LearningsDiv>
+
+          <Skills id="Skills" />
+
+          <Projects id="Projects">
             <Headline>Projects</Headline>
 
             <Pitch>
@@ -171,7 +178,7 @@ function Home() {
             </Pitch>
           </Projects>
 
-          <FinalPart>
+          <FinalPart id="ContactInfo">
             <Headline>Let's Chat</Headline>
 
             <IntroPitch>
@@ -207,6 +214,10 @@ function Home() {
   );
 }
 
+const LearningsDiv = styled.div`
+  padding-top: 15px;
+`;
+
 const Projects = styled.div`
   padding-top: 30px;
 `;
@@ -240,18 +251,6 @@ const Headline = styled.div`
   }
 `;
 
-const HeadlineLearned = styled.div`
-  font-family: Avenir Next;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 25px;
-  padding-top: 20px;x
-  /* identical to box height, or 36px */
-
-  /* SUNRISE / Charcoal */
-  color: #37313c;
-`;
-
 const HomeWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -267,16 +266,6 @@ const HomeDiv = styled.div`
 
 const CenterCol = styled.div`
   max-width: 800px;
-`;
-
-const LeftCol = styled.div`
-  width: 100px;
-  background-color: red;
-`;
-
-const RightCol = styled.div`
-  width: 100px;
-  background-color: red;
 `;
 
 const FinalButtons = styled.div`
@@ -400,7 +389,7 @@ const ItemDetailsImage = styled.div`
 `;
 
 const IntroStatement = styled.div`
-  padding-top: 10px;
+  padding-top: 30px;
   margin-bottom: 20px;
   /* width: 800px; */
 

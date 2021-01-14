@@ -16,9 +16,7 @@ function Learned() {
           <LearnedText>Collaboration is a super-power</LearnedText>
 
           <LearnedSubText>
-            <LearnedSubTextText>
-              Chatting, pairing, good comments are more important now than ever
-            </LearnedSubTextText>
+            Chatting, pairing, good comments are more important now than ever
           </LearnedSubText>
         </LearnedItem>
 
@@ -26,22 +24,14 @@ function Learned() {
           <LearnedText>Keep pushing to learn </LearnedText>
 
           <LearnedSubText>
-            <LearnedSubTextText>
-              Since graduating I've already
-            </LearnedSubTextText>
-            <LearnedSubTextText>
-              taken on three new technologies
-            </LearnedSubTextText>
+            Since graduating I've already taken on three new technologies
           </LearnedSubText>
         </LearnedItem>
 
         <LearnedItem>
           <LearnedText>Test, lint, then test again</LearnedText>
           <LearnedSubText>
-            <LearnedSubTextText>
-              Code should be tested and legible. Good tests are a great
-              invesment.
-            </LearnedSubTextText>
+            Code should be tested and legible. Good tests are a great invesment.
           </LearnedSubText>
         </LearnedItem>
       </LearnedWrapper>
@@ -68,13 +58,15 @@ const LearnedWrapper = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  flex-wrap: wrap;
   align-items: center;
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
 `;
 
 const LearnedItem = styled.div`
   color: #00848e;
-  height: 80px;
+  height: 70px;
   width: 210px;
   border-radius: 5px;
   box-shadow: 3px 3px 10px #d2cdd5;
@@ -85,6 +77,7 @@ const LearnedItem = styled.div`
     font-size: 27px;
     line-height: 36px;
     font-weight: 500;
+    width: 410px;
   }
 
   border-radius: 3px;
@@ -104,6 +97,10 @@ const LearnedText = styled.div`
   padding-left: 5px;
   padding-top: 5px;
   text-align: center;
+  @media (max-width: 800px) {
+    padding-bottom: 0px;
+    padding-top: 0px;
+  }
 `;
 
 const LearnedSubText = styled.div`
@@ -117,7 +114,5 @@ const LearnedSubText = styled.div`
   padding-left: 8px;
   padding-right: 8px;
 `;
-
-const LearnedSubTextText = styled.span``;
 
 export default Learned;
