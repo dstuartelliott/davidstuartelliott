@@ -167,7 +167,8 @@ const PodcastEpisodeDescription = styled.div`
 
   color: #37313c;
   @media (max-width: 799px) {
-    padding-bottom: 20px;
+    padding-bottom: 30px;
+    padding-top: 10px;
   }
 
   /* SUNRISE / Text Grey */

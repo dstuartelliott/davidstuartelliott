@@ -3,34 +3,26 @@ import React from "react";
 import styled from "styled-components";
 
 import { NavLink } from "react-router-dom";
-
-// let divStyle = {
-//   scope: "profile email",
-//   width: 100,
-//   height: 20,
-//   fontSize: 18,
-//   longtitle: true,
-//   borderRaduis: 5,
-//   color: "#4287f5",
-// };
+import { HashLink } from "react-router-hash-link";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 
 function MenuComponent() {
-  // eslint-disable-next-line
   // eslint-disable-next-line
 
   return (
     <Wrapper>
       <InternalMenu>
         <MenuItemWrapper>
-          <HashLink to="/some/path#with-hash-fragment">
-            Link to Hash Fragment
-          </HashLink>
-
-          <MenuItemLink to="/">Skills</MenuItemLink>
+          <MenuItemLink to="/#Story">Story</MenuItemLink>
         </MenuItemWrapper>
         <MenuItemWrapper>
-          <MenuItemLink to="/podcastsearch">Story</MenuItemLink>
+          <MenuItemLink to="/#Skills">Skills</MenuItemLink>
         </MenuItemWrapper>
+
+        <MenuItemWrapper>
+          <MenuItemLink to="/selectedpodcasts">Projects</MenuItemLink>
+        </MenuItemWrapper>
+
         <MenuItemWrapper>
           <MenuItemLink to="/selectedpodcasts">Twitter</MenuItemLink>
         </MenuItemWrapper>
@@ -54,7 +46,7 @@ const MenuItemWrapper = styled.div`
   text-align: right;
   height: 25px;
 `;
-const MenuItemLink = styled(NavLink)`
+const MenuItemLink = styled(HashLink)`
   height: 25px;
   padding: 10px;
 

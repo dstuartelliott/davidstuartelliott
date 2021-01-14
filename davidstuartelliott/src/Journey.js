@@ -8,69 +8,77 @@ function Journey() {
 
   return (
     <JourneyWrapper>
-      <JourneyItem>
+      <JourneyDottedBox>
         <JourneyText>
           Developing & Designing Digital Training Products
         </JourneyText>
         <JourneyDates>
           7<JourneyDatesText>Years</JourneyDatesText>
         </JourneyDates>
-      </JourneyItem>
-
-      <AiOutlineArrowRight
-        size={20}
-        style={{
-          verticalAlign: "middle",
-          horizontalAlign: "middle",
-          color: "gray",
-        }}
-      />
-
-      <JourneyItem>
-        <JourneyText>
-          Leading Teams of<div>Designers & Trainers</div>{" "}
-        </JourneyText>
+      </JourneyDottedBox>
+      <StyledArrow>
+        <AiOutlineArrowRight
+          size={20}
+          style={{
+            verticalAlign: "middle",
+            horizontalAlign: "middle",
+            color: "gray",
+          }}
+        />
+      </StyledArrow>
+      <JourneyDottedBox>
+        <JourneyText>Leading Teams of Designers & Trainers</JourneyText>
 
         <JourneyDates>
           4<JourneyDatesText>Years</JourneyDatesText>
         </JourneyDates>
-      </JourneyItem>
-      <AiOutlineArrowRight
-        size={20}
-        style={{
-          verticalAlign: "middle",
-          horizontalAlign: "middle",
-          color: "gray",
-        }}
-      />
-
-      <JourneyItem>
-        <JourneyText>
-          <div>Full Stack Concorida</div>
-          <div>University BootCamp</div>
-        </JourneyText>
+      </JourneyDottedBox>
+      <StyledArrow>
+        <AiOutlineArrowRight
+          size={20}
+          style={{
+            verticalAlign: "middle",
+            horizontalAlign: "middle",
+            color: "gray",
+          }}
+        />
+      </StyledArrow>
+      <JourneyDottedBox>
+        <JourneyText>Full Stack Concorida University BootCamp</JourneyText>
         <JourneyDates>
           10<JourneyDatesText>Months</JourneyDatesText>
         </JourneyDates>
-      </JourneyItem>
-      <AiOutlineArrowRight
-        size={20}
-        style={{
-          verticalAlign: "middle",
-          horizontalAlign: "middle",
-          color: "gray",
-        }}
-      />
-
-      <JourneyItem>
+      </JourneyDottedBox>
+      <StyledArrow>
+        <AiOutlineArrowRight
+          size={20}
+          style={{
+            verticalAlign: "middle",
+            horizontalAlign: "middle",
+            color: "gray",
+          }}
+        />
+      </StyledArrow>
+      <JourneyDottedBox>
         <JourneyText>Developing & Shipping Production Code</JourneyText>
         <JourneyDates>
           5<JourneyDatesText>Months</JourneyDatesText>
         </JourneyDates>
-      </JourneyItem>
+      </JourneyDottedBox>
     </JourneyWrapper>
   );
 }
+
+const StyledArrow = styled.div`
+  transition: all 0.3s ease-out;
+  transform: rotate(0deg);
+
+  @media (max-width: 800px) {
+    transform: rotate(90deg);
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+`;
 
 const JourneyWrapper = styled.div`
   display: flex;
@@ -78,6 +86,15 @@ const JourneyWrapper = styled.div`
   justify-content: space-between;
   padding-top: 20px;
   padding-bottom: 20px;
+  @media (max-width: 800px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    flex-direction: column;
+  }
 `;
 
 const JourneyText = styled.div`
@@ -91,6 +108,10 @@ const JourneyText = styled.div`
   border-radius: 4px;
   padding-left: 16px;
   padding-top: 6px;
+
+  @media (max-width: 800px) {
+    text-align: center;
+  }
 `;
 
 const JourneyDates = styled.div`
@@ -112,13 +133,13 @@ const JourneyDatesText = styled.span`
   padding-left: 4px;
 `;
 
-const JourneyItem = styled.div`
+const JourneyDottedBox = styled.div`
   display: flex;
   flex-direction: column;
 
   color: #00848e;
   height: 80px;
-  width: 180px;
+  width: 170px;
   border: 1px dashed #605866;
   border-radius: 8px;
 
@@ -128,6 +149,7 @@ const JourneyItem = styled.div`
     font-size: 27px;
     line-height: 36px;
     font-weight: 500;
+    width: 380px;
   }
 
   /* :hover {

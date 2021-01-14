@@ -46,12 +46,28 @@ function Home() {
   return (
     <HomeWrapper>
       <HomeDiv>
-        <LeftCol>{""}</LeftCol>
         <CenterCol>
           <TopFigma />
+          <ItemDetailsImage image_source={DaveSrc} smaller_source={DaveSrc}>
+            <ProfileButtons>
+              <ProfileButton onClick={goToGitHub}>
+                <AiFillGithub size={50} style={{ verticalAlign: "middle" }} />
+              </ProfileButton>
+              <ProfileButton onClick={goToLi}>
+                <AiFillLinkedin size={50} style={{ verticalAlign: "middle" }} />
+              </ProfileButton>
+
+              <ProfileButton onClick={goToTwitter}>
+                <AiFillTwitterCircle
+                  size={50}
+                  style={{ verticalAlign: "middle" }}
+                />
+              </ProfileButton>
+            </ProfileButtons>
+          </ItemDetailsImage>
 
           <IntroStatement>
-            <IntroPitch>
+            <IntroPitch id="yourAnchorTag">
               My career has been based on pursuing jobs that leverage deep work
               and intense collaboration.
             </IntroPitch>
@@ -77,9 +93,10 @@ function Home() {
               make, and every standup I go to is, frankly, joyful.
             </IntroPitch>
           </IntroStatement>
+
           <Headline>From Design, to Leadership, to Development</Headline>
+          <Journey />
         </CenterCol>
-        <RightCol>{""} </RightCol>
       </HomeDiv>
     </HomeWrapper>
   );
@@ -124,6 +141,11 @@ const Headline = styled.div`
 
   /* SUNRISE / Charcoal */
   color: #37313c;
+
+  @media (max-width: 800px) {
+    font-size: 19px;
+    text-align: justify;
+  }
 `;
 
 const HeadlineLearned = styled.div`
@@ -147,6 +169,8 @@ const HomeWrapper = styled.div`
 const HomeDiv = styled.div`
   display: flex;
   flex-direction: row;
+  padding-left: 8px;
+  padding-right: 8px;
 `;
 
 const CenterCol = styled.div`
@@ -283,8 +307,8 @@ const ItemDetailsImage = styled.div`
   z-index: 1;
 
   @media (max-width: 800px) {
-    background-image: url("${(props) => props.smaller_source}");
     background-position: center;
+    margin-top: 20px;
   }
 `;
 
@@ -292,10 +316,8 @@ const IntroStatement = styled.div`
   padding-top: 10px;
   margin-bottom: 20px;
   /* width: 800px; */
-  background-color: blue;
 
   @media (max-width: 799px) {
-    background-color: red;
   }
 `;
 
