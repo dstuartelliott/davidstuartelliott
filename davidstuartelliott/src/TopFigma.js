@@ -11,7 +11,7 @@ function TopFigma() {
   const [burgerToggle, setBurgerToggle] = React.useState(false);
 
   const [toggle, setToggle] = React.useState(false);
-  //#00848e
+  //#0  0848e
   return (
     <Wrapper>
       {/* <MenuTitleConstant>How People </MenuTitleConstant> */}
@@ -52,7 +52,7 @@ function TopFigma() {
             to={{ stroke: burgerToggle ? "#FDC500" : "#37313C" }}
           >
             {(sunlightProps) => (
-              <div>
+              <PodcastTextInternalWrapper>
                 <PodcastEpisodeTitle stroke={sunlightProps.stroke}>
                   {
                     "Hello there! I'm David Elliott, and I'm a Full Stack Web Developer."
@@ -74,20 +74,15 @@ function TopFigma() {
                           I'm pivoting from a rewarding career in adult learning
                           and leadership to a love of code.
                         </HeaderText>
-
-                        <HeaderText>
-                          I'm determined to become a full time developer, and
-                          I'd love to chat about available roles in your
-                          organization.
-                        </HeaderText>
                       </PodcastEpisodeDescription>
                     </TextAndDownArrow>
                   )}
                 </Spring>
-              </div>
+              </PodcastTextInternalWrapper>
             )}
           </Spring>
         </PodcastText>
+
         <MenuWrapper>
           <Spring
             // config={config.gentle}
@@ -132,6 +127,8 @@ function TopFigma() {
   );
 }
 
+const PodcastTextInternalWrapper = styled.div``;
+
 const MenuWrapper = styled.div`
   margin-top: -3px;
 `;
@@ -167,9 +164,10 @@ const PodcastEpisodeDescription = styled.div`
   height: ${(props) => props.height};
 
   color: #37313c;
-  @media (max-width: 799px) {
+  @media (max-width: 800px) {
     padding-bottom: 30px;
     padding-top: 10px;
+    line-height: 110%;
   }
 
   /* SUNRISE / Text Grey */
@@ -183,6 +181,7 @@ const PodcastEpisodeTitle = styled.div`
   font-weight: bold;
   font-size: 25px;
   /* identical to box height, or 36px */
+  line-height: 100%;
 
   /* SUNRISE / Charcoal */
   background: radial-gradient(circle at 0%, #37313c, ${(props) => props.stroke})
@@ -193,6 +192,15 @@ const PodcastEpisodeTitle = styled.div`
   -webkit-text-fill-color: transparent;
 
   color: #37313c;
+
+  @media (max-width: 800px) {
+    font-size: 20px;
+  }
+
+  @media (max-width: 400px) {
+    font-size: 15px;
+    line-height: 140%;
+  }
 `;
 
 const HeaderText = styled.div`
@@ -201,6 +209,12 @@ const HeaderText = styled.div`
   font-weight: 500;
   font-size: 14px;
   color: #37313c;
+
+  @media (max-width: 800px) {
+    padding-bottom: 5px;
+    line-height: 125%;
+    width: 95%;
+  }
 `;
 
 const MenuHeader = styled.div`

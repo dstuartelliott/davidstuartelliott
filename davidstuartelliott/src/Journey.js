@@ -104,13 +104,13 @@ const JourneyText = styled.div`
 
   font-size: 13px;
   font-weight: 500;
-  height: 40px;
   border-radius: 4px;
   padding-left: 16px;
   padding-top: 6px;
 
   @media (max-width: 800px) {
     text-align: center;
+    padding-left: 0px;
   }
 `;
 
@@ -138,18 +138,24 @@ const JourneyDottedBox = styled.div`
   flex-direction: column;
 
   color: #00848e;
-  height: 80px;
+  /* height: 70px; */
   width: 170px;
-  border: 1px dashed #605866;
-  border-radius: 8px;
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px #d2cdd5;
+  z-index: 1;
 
+  /* @media (max-width: 800px) {
+    width: 250px;
+  } */
+  padding-top: 5px;
+  padding-bottom: 10px;
   box-shadow: 3px 3px 10px #d2cdd5;
 
   @media (max-width: 800px) {
     font-size: 27px;
-    line-height: 36px;
+    /* line-height: 36px; */
     font-weight: 500;
-    width: 380px;
+    width: 180px;
   }
 
   /* :hover {

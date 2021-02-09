@@ -3,10 +3,10 @@ import styled from "styled-components";
 
 import TopFigma from "./TopFigma";
 
-import DaveSrc from "./images/self_portfolio.jpg"; // Tell webpack this JS file uses this image
-
 import HowImg1 from "./images/How1Master.png"; // Tell webpack this JS file uses this image
 import TelusImg1 from "./images/telus1.png"; // Tell webpack this JS file uses this image
+
+import TopImage from "./TopImage";
 
 import {
   AiFillGithub,
@@ -51,23 +51,7 @@ function Home() {
       <HomeDiv>
         <CenterCol>
           <TopFigma />
-          <ItemDetailsImage image_source={DaveSrc} smaller_source={DaveSrc}>
-            <ProfileButtons>
-              <ProfileButton onClick={goToGitHub}>
-                <AiFillGithub size={50} style={{ verticalAlign: "middle" }} />
-              </ProfileButton>
-              <ProfileButton onClick={goToLi}>
-                <AiFillLinkedin size={50} style={{ verticalAlign: "middle" }} />
-              </ProfileButton>
-
-              <ProfileButton onClick={goToTwitter}>
-                <AiFillTwitterCircle
-                  size={50}
-                  style={{ verticalAlign: "middle" }}
-                />
-              </ProfileButton>
-            </ProfileButtons>
-          </ItemDetailsImage>
+          <TopImage />
           <IntroStatement id="Story">
             <TitleFlex>
               <SeperatorRTop></SeperatorRTop>
@@ -90,15 +74,13 @@ function Home() {
               November.
             </IntroPitch>
             <IntroPitch>
-              Since August, with the generous support of everyone at Telus in
-              the Training department, I've been supplmenting my full-time job
-              at as a Training Manager with Front End development work at Telus
-              Digital.
+              In October of 2020, I supplmentend my full-time job at as a
+              Training Manager with Front End development work at Telus Digital.
             </IntroPitch>
 
             <IntroPitch>
-              Full stack development is a perfect fit for me. Every git commit I
-              make, and every standup I go to is, frankly, joyful.
+              On February 1st, I began a 6 month Full Time Developmental Role at
+              Telus Digital on the same team that I had interned on.
             </IntroPitch>
           </IntroStatement>
           <HeadlineSub>From Design, to Leadership, to Development</HeadlineSub>
@@ -108,6 +90,12 @@ function Home() {
             <Learned></Learned>
           </LearningsDiv>
           <span id="Skills"></span>
+          <TitleFlex>
+            <SeperatorRTop></SeperatorRTop>
+            <Headline> Developer Skills</Headline>
+            <SeperatorLTop></SeperatorLTop>
+          </TitleFlex>
+
           <Skills />
           <Projects id="Projects">
             <TitleFlex>
@@ -138,6 +126,7 @@ function Home() {
                 <AppDetailsImg
                   image_source={HowImg1}
                   smaller_source={HowImg1}
+                  onClick={goToHowPeopleTalk}
                 ></AppDetailsImg>
 
                 <ProjectButtons>
@@ -175,6 +164,7 @@ function Home() {
                 <AppDetailsImg
                   image_source={TelusImg1}
                   smaller_source={TelusImg1}
+                  onClick={goToTelusBrandHub}
                 ></AppDetailsImg>
               </Details>
               <TLDRBtnSmaller onClick={goToTelusBrandHub}>
@@ -193,6 +183,10 @@ function Home() {
                 company.
               </IntroPitch>
               <IntroPitch>
+                Let's discuss how that can work for your company.
+              </IntroPitch>
+
+              <IntroPitch>
                 Thanks for your time - I know there are a lot of candidates, and
                 I appreciate you reviewing my portfolio.
               </IntroPitch>
@@ -200,7 +194,6 @@ function Home() {
               <IntroPitch>Best, Dave Elliott </IntroPitch>
             </FinalText>
             <ContactInfo>
-              <Headline>Contacts</Headline>
               <FinalButtons>
                 <ProfileButtonInSentence onClick={goToGitHub}>
                   <AiFillGithub size={50} style={{ verticalAlign: "middle" }} />
@@ -228,10 +221,15 @@ function Home() {
 
 const ContactInfo = styled.div`
   padding-top: 20px;
+  margin-left: -8px;
+  @media (max-width: 800px) {
+    margin-left: -5px;
+  }
 `;
 
 const TitleFlex = styled.div`
   display: flex;
+  padding-top: 20px;
 `;
 
 const SeperatorLTop = styled.div`
@@ -266,9 +264,7 @@ const SeperatorR = styled.div`
   align-self: center;
 `;
 
-const FinalText = styled.div`
-  padding-top: 10px;
-`;
+const FinalText = styled.div``;
 
 const LearningsDiv = styled.div`
   padding-top: 15px;
@@ -355,24 +351,6 @@ const FinalPart = styled.div`
 
 const Details = styled.div``;
 
-const ProfileButton = styled.button`
-  background-color: transparent;
-  color: #e0f5f5;
-  :hover {
-    cursor: pointer;
-    color: #47c1bf;
-  }
-  :focus {
-    outline: none;
-  }
-  vertical-align: middle;
-  padding: 2px;
-  align-self: left;
-  width: 50px;
-  margin-bottom: 10px;
-  border: 0px;
-`;
-
 const ProfileButtonInSentence = styled.button`
   background-color: transparent;
   color: #00848e;
@@ -409,13 +387,6 @@ const TLDRBtnSmaller = styled.button`
   }
 `;
 
-const ProfileButtons = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding: 10px;
-`;
-
 const AppDetailsImg = styled.div`
   background-image: url("${(props) => props.image_source}");
   height: 400px;
@@ -429,6 +400,10 @@ margin-bottom: 10px;
   border-radius: 5px;
   box-shadow: 3px 3px 10px #d2cdd5;
   z-index: 1;
+  :hover {
+    cursor: pointer;
+    color: #47c1bf;
+  }
 
   @media (max-width: 800px) {
     background-size: contain;
@@ -440,27 +415,7 @@ margin-bottom: 10px;
   }
 `;
 
-const ItemDetailsImage = styled.div`
-  background-image: url("${(props) => props.image_source}");
-  height: 300px;
-  /* max-width: 800px; */
-
-  background-position: top-right;
-  background-size: cover;
-  background-repeat: no-repeat;
-
-  border-radius: 15px;
-  border: none;
-  z-index: 1;
-
-  @media (max-width: 800px) {
-    background-position: center;
-    margin-top: 20px;
-  }
-`;
-
 const IntroStatement = styled.div`
-  padding-top: 30px;
   margin-bottom: 20px;
   /* width: 800px; */
 

@@ -73,6 +73,7 @@ const MenuItemLink = styled(HashLink)`
   font-family: Avenir Next;
   font-style: normal;
   font-size: 15px;
+  font-weight: 400;
 
   color: #20404e;
   text-decoration: none;
@@ -82,27 +83,11 @@ const MenuItemLink = styled(HashLink)`
   }
 `;
 
-// const MenuItemExternalLink = styled.div`
-//   height: 25px;
-//   padding: 10px;
-
-//   font-family: Avenir Next;
-//   font-style: normal;
-//   font-size: 15px;
-
-//   color: #20404e;
-//   text-decoration: none;
-//   :hover {
-//     color: #091216;
-//     cursor: hand;
-//   }
-// `;
-
 const MenuItemExternalLink = styled.button`
   height: 25px;
 
   font-family: Avenir Next;
-  font-weight: 500;
+  font-weight: 400;
   font-style: normal;
   font-size: 15px;
   background-color: transparent;
