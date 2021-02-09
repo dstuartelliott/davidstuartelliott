@@ -98,11 +98,11 @@ function Home() {
 
           <Skills />
           <Projects id="Projects">
-            <TitleFlex>
+            <ProjectsTitleFlex>
               <SeperatorR></SeperatorR>
               <Headline> Projects</Headline>
               <SeperatorL></SeperatorL>
-            </TitleFlex>
+            </ProjectsTitleFlex>
 
             <Pitch>
               <HeadlineSub>
@@ -232,6 +232,11 @@ const TitleFlex = styled.div`
   padding-top: 20px;
 `;
 
+const ProjectsTitleFlex = styled.div`
+  display: flex;
+  padding-top: 10px;
+`;
+
 const SeperatorLTop = styled.div`
   margin-left: 10px;
 
@@ -268,6 +273,7 @@ const FinalText = styled.div``;
 
 const LearningsDiv = styled.div`
   padding-top: 15px;
+  padding-bottom: 15px;
 `;
 
 const Projects = styled.div``;
