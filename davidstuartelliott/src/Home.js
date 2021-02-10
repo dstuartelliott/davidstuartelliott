@@ -74,13 +74,13 @@ function Home() {
               November.
             </IntroPitch>
             <IntroPitch>
-              In October of 2020, I supplmentend my full-time job at as a
+              In October of 2020, I supplemented my full-time job at as a
               Training Manager with Front End development work at Telus Digital.
             </IntroPitch>
 
             <IntroPitch>
-              On February 1st, I began a 6 month Full Time Developmental Role at
-              Telus Digital on the same team that I had interned on.
+              On February 1st, I began a six month Full Time Developmental Role
+              at Telus Digital on the same team that I had interned on.
             </IntroPitch>
           </IntroStatement>
           <HeadlineSub>From Design, to Leadership, to Development</HeadlineSub>
@@ -179,8 +179,7 @@ function Home() {
               <IntroPitch>
                 Well, that's my pitch! I bring a love of collaboration and
                 curiosity to work that I do, and development work is the perfect
-                fit for me. I hope I can discuss how that can work for your
-                company.
+                fit for me.
               </IntroPitch>
               <IntroPitch>
                 Let's discuss how that can work for your company.
