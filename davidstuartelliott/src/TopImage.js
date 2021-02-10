@@ -83,6 +83,7 @@ const ItemDetailsImage = styled.div`
   background-position: top-right;
   background-size: cover;
   background-repeat: no-repeat;
+  will-change: transform;
 
   border-radius: 15px;
   border: none;
