@@ -36,7 +36,7 @@ function goToGitHub() {
 }
 
 function goToLi() {
-  window.location.href = "https://www.linkedin.com/in/david-elliott-montreal/";
+  window.location.href = "https://www.linkedin.com/in/david-stuart-elliott/";
 }
 
 function goToTwitter() {
